@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Afyona!</title>
+    <style>
+        body {
+            background-color: #ff69b4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            color: #fff;
+            position: relative;
+            font-family: 'Your Chosen Font', sans-serif;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            /* Remove the animation property for static balloons */
+        }
+
+        /* Customize balloon colors */
+        .balloon:nth-child(4n + 1) {
+            background-color: #f00; /* Red */
+        }
+
+        .balloon:nth-child(4n + 2) {
+            background-color: #00f; /* Blue */
+        }
+
+        .balloon:nth-child(4n + 3) {
+            background-color: #0f0; /* Green */
+        }
+
+        .balloon:nth-child(4n) {
+            background-color: #ff0; /* Yellow */
+        }
+
+        /* Additional balloon colors */
+        .balloon:nth-child(5n + 1) {
+            background-color: #ff00ff; /* Magenta */
+        }
+
+        .balloon:nth-child(5n + 2) {
+            background-color: #00ffff; /* Cyan */
+        }
+
+        .balloon:nth-child(5n + 3) {
+            background-color: #ffff00; /* Yellow */
+        }
+
+        .balloon:nth-child(5n + 4) {
+            background-color: #800080; /* Purple */
+        }
+
+        .balloon:nth-child(5n) {
+            background-color: #008000; /* Dark Green */
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="https://od.lk/s/ODVfNTI0Njk2NDBf/%D8%AD%D8%A7%D9%84%D8%A7%D8%AA%20%D9%88%D8%A7%D8%AA%D8%B3%20%D9%85%D9%86%D9%8A%D8%B1%20%D8%A7%D9%86%D8%AA%D9%8A%20%D9%81%D8%B1%D8%AD%D9%8A" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h1>Happy Birthday Afyona, You Mean The World to Me.</h1>
+
+    <!-- Generating static balloons with mixed colors -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            createStaticBalloons();
+        });
+
+        function createStaticBalloons() {
+            const numBalloons = 100;
+
+            for (let i = 0; i < numBalloons; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.top = `${Math.random() * 100}%`;
+                balloon.style.left = `${Math.random() * 100}%`;
+
+                document.body.appendChild(balloon);
+            }
+        }
+    </script>
+</body>
+</html>
